@@ -1,0 +1,129 @@
+/* 
+---------------------------------------------
+global styles
+--------------------------------------------- 
+*/
+
+:root {
+    --primary: #3A86FF;
+    --secondary: #f0f0f0;
+    --accent: #ff4d4d;
+    --bg: #F5F7FA;
+    --text: #333;
+    --text-light: #777;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  html,
+  body {
+    background: #fff;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #212741;
+    font-family: 'Inter';
+  }
+  
+  p {
+    color: #212741;
+    font-family: sans-serif;
+  
+  }
+  
+  ::selection {
+    background: #ff511a;
+    color: #fff;
+  }
+  
+  ::-moz-selection {
+    background: #ff511a;
+    color: #fff;
+  }
+  
+  @media (max-width: 991px) {
+    html, body {
+      overflow-x: hidden;
+    }
+    .mobile-top-fix {
+      margin-top: 30px;
+      margin-bottom: 0px;
+    }
+    .mobile-bottom-fix {
+      margin-bottom: 30px;
+    }
+    .mobile-bottom-fix-big {
+      margin-bottom: 60px;
+    }
+  }
+  
+  .green-button a {
+    font-size: 14px;
+    color: #fff;
+    background-color: #43ba7f;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all .3s;
+  }
+  
+  .green-button a:hover {
+    opacity: 0.9;
+  }
+  
+  .orange-button a {
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff511a;
+    padding: 12px 30px;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all .3s;
+  }
+  
+  .orange-button a:hover {
+    opacity: 0.9;
+  }
+  
+  section {
+    margin-top: 120px;
+  }
+  
+  .section-heading {
+    position: relative;
+    z-index: 2;
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  
+  .section-heading h6 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ff511a;
+    font-weight: 700;
+  }
+  
+  .section-heading h4 {
+    margin-top: 10px;
+    line-height: 40px;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #212741;
+  }
+  
+  .section-heading p {
+    margin-top: 30px;
+  }

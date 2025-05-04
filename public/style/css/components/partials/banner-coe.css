@@ -1,0 +1,24 @@
+.page-heading {
+    background: 
+        linear-gradient(rgba(33, 39, 65, 0.9), rgba(33, 39, 65, 0.9)), 
+        url(/images/polibatam1.jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 215px 0px 120px 0px;
+        text-align: center;
+  }
+  
+    .page-heading h2 {
+      font-size: 56px;
+      color: #fff;
+      font-weight: 700;
+    }
+    
+    .page-heading .div-dec {
+      width: 80px;
+      height: 6px;
+      border-radius: 3px;
+      background-color: #fff;
+      margin: 20px auto 0 auto;
+    }

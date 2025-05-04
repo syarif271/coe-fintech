@@ -1,0 +1,211 @@
+:root {
+            --bg: #F5F7FA;
+            --accent: #FF4D4D;
+            --glass: #10749f80;
+            --text: #2D3436;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bg-blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(45deg, var(--glass), transparent);
+            border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+            filter: blur(30px);
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: rotate(0deg) translate(0, 0); }
+            25% { transform: rotate(5deg) translate(-50px, -50px); }
+            50% { transform: rotate(0deg) translate(50px, 50px); }
+            75% { transform: rotate(-5deg) translate(50px, -50px); }
+            100% { transform: rotate(0deg) translate(0, 0); }
+        }
+
+        .login-container {
+            position: relative;
+            z-index: 1;
+            background: rgba(255,255,255,0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 450px;
+            transform-style: preserve-3d;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .logo img {
+            width: 100px;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+        }
+
+        .logo h1 {
+            color: var(--text);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .login-form .input-group {
+            margin-bottom: 1.8rem;
+            position: relative;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 3rem;
+            border: 2px solid rgba(16,116,159,0.1);
+            border-radius: 12px;
+            font-size: 1rem;
+            background: rgba(16,116,159,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--glass);
+            background: white;
+            box-shadow: 0 5px 15px rgba(16,116,159,0.1);
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--glass);
+            font-size: 1.2rem;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateZ(20px);
+        }
+
+        .login-btn:hover {
+            transform: translateY(-3px) translateZ(20px);
+            box-shadow: 0 10px 20px rgba(255,77,77,0.3);
+        }
+
+        .additional-links {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .additional-links a {
+            color: var(--glass);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .additional-links a:hover {
+            color: var(--accent);
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .input-group .toggle-pw:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                margin: 1rem;
+                padding: 2rem;
+            }
+            
+            .logo img {
+                width: 80px;
+            }
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 1rem 3.5rem 1rem 3rem; /* Tambah padding kanan */
+            border: 2px solid rgba(16,116,159,0.1);
+            border-radius: 12px;
+            font-size: 1rem;
+            background: rgba(16,116,159,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .input-group i:first-child { /* Ikon kiri (lock) */
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--glass);
+            font-size: 1.2rem;
+            z-index: 1;
+        }
+        
+        .input-group .toggle-pw { /* Ikon mata kanan */
+            position: absolute;
+            right: 1.2rem;
+            left: auto !important; /* Pastikan tidak ikut style ikon kiri */
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--glass);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .bg-blob {
+            position: fixed; /* Ganti absolute ke fixed untuk stabil */
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(45deg, var(--glass), transparent);
+            border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+            filter: blur(30px);
+            animation: float 20s infinite linear;
+            pointer-events: none; /* Agar tidak mengganggu interaksi */
+        }
+
+        @keyframes float {
+            0% { transform: rotate(0deg) translate(0, 0) scale(1); }
+            50% { transform: rotate(180deg) translate(50px, 50px) scale(1.1); }
+            100% { transform: rotate(360deg) translate(0, 0) scale(1); }
+        }
+
+        body {
+            overflow: hidden; /* Mencegah scroll bar muncul */
+        }

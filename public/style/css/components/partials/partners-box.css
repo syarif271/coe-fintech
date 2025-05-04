@@ -1,0 +1,54 @@
+/* 
+---------------------------------------------
+partners
+--------------------------------------------- 
+*/:root {
+  --primary: #3A86FF;
+  --secondary: #f0f0f0;
+  --accent: #ff4d4d;
+  --bg: #F5F7FA;
+  --text: #333;
+  --text-light: #777;
+}
+
+.partners {
+    background-color: var(--bg);
+    padding: 80px 0px;
+  }
+  
+  .carousel {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-items {
+    display: flex;
+    width: calc(100% * 2);
+    animation: scroll-carousel 18s linear infinite;
+  }
+  
+  section.partners .item {
+    margin: 0px;
+    flex: 0 0 auto;
+    width: 200px;
+    padding: 0px 10px;
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  section.partners .item:hover {
+    opacity: 0.75;
+  }
+  
+  @keyframes scroll-carousel {
+    0% {
+        transform: translateX(0); /* Mulai dari posisi awal */
+    }
+    100% {
+        transform: translateX(-50%); /* Geser semua item ke kiri */
+    }
+  }

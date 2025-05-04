@@ -1,0 +1,141 @@
+:root {
+            --orange: #FF6B35;    /* Kreativitas & Inovasi */
+            --blue-light: #2A5C82; /* Stabilitas */
+            --blue-dark: #1A3657;  /* Profesionalisme */
+            --white: #ffffff;      /* Transparansi */
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--white);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        /* Header Styles */
+        .coe-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .coe-header h1 {
+            font-size: 2.8rem;
+            color: var(--blue-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .coe-header h1::before,
+        .coe-header h1::after {
+            content: '';
+            width: 40px;
+            height: 40px;
+            background: 
+                linear-gradient(45deg, 
+                    var(--orange) 25%, 
+                    var(--blue-light) 25% 50%, 
+                    var(--blue-dark) 50% 75%, 
+                    var(--white) 75%);
+            transform: rotate(45deg);
+            border: 2px solid var(--blue-dark);
+        }
+
+        .coe-tagline {
+            color: var(--blue-light);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--orange);
+            box-shadow: 0 10px 30px rgba(42,92,130,0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(42,92,130,0.15);
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 60px;
+            height: 60px;
+            background: var(--orange);
+            transform: rotate(45deg);
+            opacity: 0.1;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--blue-dark);
+        }
+
+        .service-title {
+            color: var(--blue-dark);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-subtitle {
+            color: var(--orange);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .service-desc {
+            color: var(--blue-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-target {
+            display: inline-block;
+            background: rgba(42,92,130,0.1);
+            color: var(--blue-dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .coe-header h1 {
+                font-size: 2rem;
+                flex-direction: column;
+            }
+            
+            .coe-header h1::before,
+            .coe-header h1::after {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .service-card {
+                padding: 1.5rem;
+            }
+        }

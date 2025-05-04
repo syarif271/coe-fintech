@@ -1,0 +1,130 @@
+/* 
+---------------------------------------------
+footer 
+--------------------------------------------- 
+*/
+
+a {
+    text-decoration: none;
+}
+
+#contact {
+    padding: 0;
+}
+
+footer {
+    background-color: #181d30;
+    text-align: left;
+    padding: 50px 0px 25px;
+  }
+  
+  footer .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+  
+  footer .items {
+    text-align: center;
+  }
+  
+  footer .text {
+    text-align: center;
+    display: block;
+  }
+  
+  footer h6{
+    color: white;
+  }
+  
+  footer p {
+    color: #fff;
+    font-weight: 300;
+    padding-bottom: 0px;
+  }
+  
+  footer p a {
+    color: #e3e3e3;
+  }
+  
+  footer p a:hover {
+    color: var(--accent);
+  }
+  
+  .logo-polibatam {
+    width: 150px;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: ce;
+  }
+  
+  .social-media .items {
+    margin-top: 30px;
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  .logo {
+    margin: 0px 10px;
+  }
+  
+  .instagram img{
+    width: 40px;
+    height: auto;
+    border-radius: 50px;
+  }
+  
+  .instagram img:hover{
+    transform: translateY(-5px);
+    transition: all 0.3 ease; 
+  }
+  
+  .tiktok img{
+    width: 50px;
+    height: auto;
+    border-radius: 50px;
+  }
+  
+  .tiktok img:hover{
+    transform: translateY(-5px);
+    transition: all 0.3 ease;
+  }
+  
+  .youtube img{
+    width: 40px;
+    height: auto;
+    border-radius: 50px;
+  }
+  
+  .youtube img:hover{
+    transform: translateY(-5px);
+    transition: all 0.3 ease;
+  
+  }
+  
+  .items p{
+    margin-bottom: 0;
+  }
+
+  .lokasi p {
+    margin-bottom: 0;
+  }
+
+  .email p{
+    margin-bottom: 0;
+  }
+
+  .instagram p{
+    margin-bottom: 0;
+  }
+
+  .tiktok p {
+    margin-bottom: 0;
+  }

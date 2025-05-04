@@ -1,0 +1,31 @@
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 4rem;
+    margin-bottom: 50px;
+  }
+  
+  .page-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: white;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .page-btn:hover {
+    background: var(--secondary);
+  }
+  
+  .page-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
